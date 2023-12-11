@@ -1,0 +1,16 @@
+Algo TableaMultidimensionnel
+Variables   nbres[100][100],valueMax,i,j:Entier
+Debut
+    valueMax <- 0
+    nbres <- [[0, 18], [1, 55], [45, 1528], [121, 2]]
+
+    Pour i <- 0 a 3 pas 1 Faire
+        Pour j <- 0 a 1 pas 1 Faire
+        Si (valueMax < nbres[i][j]) Alors
+            valueMax <- nbres[i][j]
+        FinSi
+        FinPour
+    FinPour
+
+    Ecrire("Voici la valeur max de mon tableau : ",valueMax)
+Fin

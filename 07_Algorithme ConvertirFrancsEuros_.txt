@@ -1,0 +1,16 @@
+Algorithme ConvertirFrancsEuros
+
+Fonction convertir(euro:Reel):Reel
+    Debutdeclaration
+        dollar:Reel
+    Findeclaration
+    dollar <- euro * 1.07
+    retourner(dollar)
+FinFonction
+
+Variables number: Entier
+Debut
+    Ecrire("Entrez votre prix en € : \n")
+    Lire(number)
+    Ecrire(number," € => ",convertir(number)," $")
+Fin

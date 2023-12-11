@@ -1,0 +1,39 @@
+Algo MoyenneClasse
+Variables   nbre,somme,notes[10],i,nbreTab,top,min: Reel
+            
+Debut
+    somme <- 0
+    top <- 0
+    min <- 20
+    Ecrire("Entrez le nombre d'élèves :\n")
+    Lire(nbre)
+
+    TantQue (nbre <= 0) Faire
+        Lire(nbre)
+    FinTantQue
+
+    nbreTab <- nbre - 1
+    Ecrire("Entrez les notes de chaque élève (",nbre,") :\n")
+
+    Pour i <- 0 a nbreTab pas 1 Faire
+        Lire(notes[i])
+        Si (notes[i] > top) Alors
+            top <- notes[i]
+        FinSi
+        Si (notes[i] < min) Alors
+            min <- notes[i]
+        FinSi
+        somme <- notes[i] + somme
+    FinPour
+
+    Ecrire("Voici les notes des élèves de la classe :\n")
+
+    Pour i <- 0 a nbreTab pas 1 Faire  
+        Ecrire("Eleve #",(i+1)," : ",notes[i],"/20\n")
+    FinPour
+
+    Ecrire("La moyenne de la classe s'élève à :\n",(somme / nbre),"/20")
+
+    Ecrire("La note max est de : ",top,"\n")
+    Ecrire("La note min est de : ",min,"\n")
+Fin

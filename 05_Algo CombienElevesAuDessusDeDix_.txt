@@ -1,0 +1,33 @@
+Algo CombienElevesAuDessusDeDix
+Variables   nbre,eleves[100],i,somme,overTen:Entier
+Debut
+    somme <- 0
+    overTen <- 0
+    Ecrire("Combien d'élèves dans la classe ?\n")
+    Lire(nbre)
+    Ecrire("Saisir la note des ",nbre," élèves\n")
+
+    Pour i <- 1 a nbre pas 1 Faire
+        Lire(eleves[i])
+    FinPour
+    
+    Pour i <- 1 a nbre pas 1 Faire
+        somme <- somme + eleves[i]
+    FinPour
+
+    Pour i <- 1 a nbre pas 1 Faire
+        Si (eleves[i] > 10) Alors
+            overTen <- overTen + 1
+        FinSi
+    FinPour
+
+    Ecrire("La moyenne de la classe est de : ",somme / nbre,"\n")
+    Ecrire("Il y a ",overTen," élèves au-dessus de la moyenne (",somme / nbre,")\n")
+    Ecrire("Voici toutes les notes de la classe :\n")
+
+    Pour i <- 1 a nbre pas 1 Faire
+        Ecrire(eleves[i],"\n")
+    FinPour
+
+    
+Fin

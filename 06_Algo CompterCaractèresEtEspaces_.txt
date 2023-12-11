@@ -1,0 +1,17 @@
+Algo FonctionCompterCaractèresEtEspaces
+Variables   i,j: Entier
+            mot: Chaine
+
+Debut
+    Ecrire("Ecrivez une phrase ou un mot :\n")
+    Lire(mot)
+    i <- 0
+    j <- 0
+    TantQue (mot[i] <> null) Faire
+        Si (mot[i] = " ") Alors
+            j <- j + 1
+        FinSi
+        i <- i + 1
+    FinTantQue
+    Ecrire("Le mot (",mot,") contient : ",(i - j)," caractère(s) et ",j," espace(s)\n")
+Fin

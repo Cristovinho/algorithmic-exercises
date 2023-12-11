@@ -1,0 +1,10 @@
+Algo Zero
+Variables   nombre: Entier
+Debut
+    Ecrire("Ecrivez un chiffre\n")
+    Lire(nombre)
+    TantQue (nombre >= 0) Faire
+        Ecrire(nombre,"\n")
+        nombre <- nombre - 1
+    FinTantQue
+Fin

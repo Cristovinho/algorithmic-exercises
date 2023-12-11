@@ -1,0 +1,16 @@
+Algo Deviner
+Variables   nombre,reponse: Entier
+Debut
+    Ecrire("Devinez un nombre entre 0 et 10\n")
+    Lire(nombre)
+    reponse <- 5
+    TantQue (nombre <> reponse) Faire
+        Si (nombre < reponse) Alors
+            Ecrire("Plus\n")
+        SinonSi (nombre > reponse) Alors
+            Ecrire("Moins\n")
+        FinSi
+        Lire(nombre)
+    FinTantQue
+    Ecrire("Bravo")
+Fin
